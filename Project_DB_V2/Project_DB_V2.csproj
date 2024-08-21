@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40285C21-B3AC-41BB-863C-C39FDEB5CBA6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_DB_V2</RootNamespace>
+    <AssemblyName>Project_DB_V2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Queries\BranchEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Queries\BranchEmployees.Designer.cs">
+      <DependentUpon>BranchEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\CarTotalCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Queries\CarTotalCost.Designer.cs">
+      <DependentUpon>CarTotalCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car_MaintainenceDataSet1.cs">
+      <DependentUpon>Car_MaintainenceDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\CustomerCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Queries\CustomerCars.Designer.cs">
+      <DependentUpon>CustomerCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerCarsRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerCarsRep.Designer.cs">
+      <DependentUpon>CustomerCarsRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\employees_services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Queries\employees_services.Designer.cs">
+      <DependentUpon>employees_services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Branches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Branches.Designer.cs">
+      <DependentUpon>Branches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cars.Designer.cs">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car_MaintainenceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car_MaintainenceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Car_MaintainenceDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car_MaintainenceDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ManagerBranchRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ManagerBranchRep.Designer.cs">
+      <DependentUpon>ManagerBranchRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\Queries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Queries\Queries.Designer.cs">
+      <DependentUpon>Queries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="Forms\Tools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools.Designer.cs">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Queries\BranchEmployees.resx">
+      <DependentUpon>BranchEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Queries\CarTotalCost.resx">
+      <DependentUpon>CarTotalCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerCarReport.rdlc" />
+    <EmbeddedResource Include="Queries\CustomerCars.resx">
+      <DependentUpon>CustomerCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerCarsRep.resx">
+      <DependentUpon>CustomerCarsRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Queries\employees_services.resx">
+      <DependentUpon>employees_services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Branches.resx">
+      <DependentUpon>Branches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cars.resx">
+      <DependentUpon>Cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ManagerBranchRep.rdlc" />
+    <EmbeddedResource Include="Reports\ManagerBranchRep.resx">
+      <DependentUpon>ManagerBranchRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools.resx">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Queries\Queries.resx">
+      <DependentUpon>Queries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="Car_MaintainenceDataSet.xsc">
+      <DependentUpon>Car_MaintainenceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Car_MaintainenceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Car_MaintainenceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Car_MaintainenceDataSet.xss">
+      <DependentUpon>Car_MaintainenceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Car_MaintainenceDataSet1.xsc">
+      <DependentUpon>Car_MaintainenceDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Car_MaintainenceDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Car_MaintainenceDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Car_MaintainenceDataSet1.xss">
+      <DependentUpon>Car_MaintainenceDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2810%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-full-screen-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_white1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %2820%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %28124%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+    <None Include="Resources\pngwing.com %281%29.png" />
+    <None Include="Resources\image %2816%29.png" />
+    <None Include="Resources\image %2817%29.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
